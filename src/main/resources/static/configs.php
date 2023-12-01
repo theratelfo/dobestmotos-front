@@ -1,0 +1,1 @@
+Piwik.HeatmapSessionRecording.configuration.assign({"heatmaps":[],"sessions":[{"id":130,"sample_rate":"100.0","min_time":0,"activity":true,"keystrokes":true}],"idsite":"155","trackerid":"oiPRDT"});
