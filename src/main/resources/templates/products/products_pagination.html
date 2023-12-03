@@ -1,0 +1,143 @@
+<div data-animaleinbegin="90%" data-animalename="qfyfadeInUp" data-duration="1" data-delay=""
+	class=" qfy-column-6-656af3392991d991974 qfy-column-inner  vc_span_class  vc_span9  text-Default small-screen-undefined notfullrow"
+	data-dw="3/4" data-fixheight="">
+	<div style="margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;border-radius:0px;;position:relative;padding: 0.5cm;"
+		class="column_inner ">
+		<div class=" background-overlay grid-overlay-0" style="background-color: transparent;width:100%;"></div>
+		<div class="column_containter" style="z-index:3;position:relative;">
+			<div m-padding="16px 0 0 0" p-padding="0 0 0 0" css_animation_delay="0" qfyuuid="products_list_f6uyq-c-oo"
+				data-post="product" post_cate="" class="qfy-element mobilenopadding grid_products qfyproductlist"
+				id="qfy-product-656af33929a01607661" style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">
+				<style>
+					html #content #qfy-product-656af33929a01607661 nav.bitcommerce-pagination {
+						text-align: center
+					}
+
+					html #content #qfy-product-656af33929a01607661 .bitcommerce-pagination {
+						position: relative;
+						left: 0px
+					}
+
+					html #content #qfy-product-656af33929a01607661 .bitcommerce-pagination {
+						position: relative;
+						top: 8px
+					}
+
+					html #qfy-product-656af33929a01607661 ul.products li.product {
+						padding-right: 10px
+					}
+
+					html #qfy-product-656af33929a01607661 ul.products li.product .price {
+						right: 10px
+					}
+
+					html #qfy-product-656af33929a01607661 ul.products li.product {
+						padding-bottom: 10px
+					}
+
+					html #qfy-product-656af33929a01607661 ul.products li.product .pitem {
+						margin-bottom: 10px
+					}
+
+					html #qfy-product-656af33929a01607661 .bitcommerce-pagination li a,
+					html #qfy-product-656af33929a01607661 .bitcommerce-pagination li span {
+						display: inline-block;
+						background-color: #a83c27;
+						border: 1px solid transparent;
+						color: #ffffff;
+						font-size: 16px;
+						line-height: 16px;
+						margin-right: 3px;
+					}
+
+					html #qfy-product-656af33929a01607661 .bitcommerce-pagination li a.current,
+					html #qfy-product-656af33929a01607661 .bitcommerce-pagination li span.current {
+						background-color: transparent;
+						border: 1px solid #a83c27;
+						color: #a83c27
+					}
+
+					html #qfy-product-656af33929a01607661 ul.products li.product .wd_product_wrapper,
+					html #qfy-product-656af33929a01607661 ul.products li.product .product_cate {
+						text-align: center;
+					}
+
+					html #qfy-product-656af33929a01607661 ul.products li.product .qfycustomtable .qfycustomtd {
+						text-align: center;
+					}
+				</style>
+				<div class="bitcommerce defaultminheight mobile-columns-2 columns-4">
+					<ul class="products">
+						<div class="">
+							<div th:each="product : ${paginatedResponse.content}" class="vc-item">
+								<div class="vc-item">
+									<li
+										class="post-144775 product type-product status-publish mobile_last product shipping-taxable purchasable product-type-simple product-cat-ignition-magneto-stator-coil product-cat-yamaha instock site_drag_container">
+										<div class="wd_product_wrapper" data-proid="{{product.id}}">
+
+											<div border="0" width="100%" style="table-layout:fixed;"
+												class="qfycustomtable">
+												<div class="qfycustomtr">
+
+													<div class="qfycustomtd lefttd" valign="top">
+														<a class="product_a pitem" href="/product/{{product.id}}"
+															target="_BLATNK">
+															<div class="front-image product_img "><img class=" ag_image"
+																	th:src="${product.imagen}" alt="XQ-717-1"
+																	description="" data-attach-id="144777"
+																	data-title="XQ-717-1" title="" src-img=""><i></i>
+															</div>
+															<div class="back-image product_img ">
+																<img class=" ag_image" th:src="${product.imagen}"
+																	alt="XQ-717-3" description=""
+																	data-attach-id="144779" data-title="XQ-717-3"
+																	title="" src-img=""> <i></i>
+															</div>
+														</a>
+
+													</div>
+													<div class="qfycustomtd righttd" valign="top"> <a
+															href="https://www.dobestmoto.com/?product=motorcycle-ignition-magneto-stator-coil-66v-85510-00-for-yamaha-wave-runner-xl1200-ltd-xa1200x-wave-runner-gp1200r-gp1200aca-wave-runner-xlt1200-xa1200ad-gp1200-gp1200ay-gp1200r-gp1200az-gp1200-gp1200"
+															target="_BLATNK">
+															<h3 class="product_title pitem"
+																th:text="${#strings.length(product.descripcion) > 28 ? #strings.substring(product.descripcion, 0, 28) + '...' : product.descripcion}">
+															</h3>
+														</a>
+														<div class="pitem">
+
+															<span class="price"><span class="amount"
+																	th:text="${product.precio}"></span></span>
+														</div>
+														<div class="pitem loopcartbtn"><a
+																href="/?page_id=59026&amp;add-to-cart=144775"
+																rel="nofollow" data-product_id="144775" data-title=""
+																data-close="" data-product_sku="DL-XQ-749"
+																class=" no-opennew button add_to_cart_btn add_to_cart_button product_type_simple"
+																target="_BLANK">Add to cart</a></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</div>
+
+
+
+							</div>
+						</div>
+					</ul>
+					<nav class="bitcommerce-pagination zoo_ln_ajax_pagination" data-ln-preset="itemname">
+						<ul class="page-numbers" th:if="${paginatedResponse != null}">
+							<li th:class="${currentPage == 1} ? 'current' : ''"><span class="page-numbers">1</span></li>
+							<li th:each="pageNumber : ${#numbers.sequence(2, paginatedResponse.totalPages)}">
+								<a class="page-numbers" th:href="@{/products(page=${pageNumber})}"
+									th:text="${pageNumber}"
+									th:classappend="${pageNumber == currentPage} ? 'current' : ''"></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

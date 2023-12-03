@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" class="ancient-ie old-ie bit-html" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" class="ancient-ie old-ie  bit-html" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" class="old-ie bit-html" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 9]>
+<html id="ie9" class="old-ie9 bit-html" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8) | !(IE 9)  ]><!-->
+<html class="bit-html" dir="ltr" lang="en-US">
+
+<!--<![endif]-->
+
+<head>
+	<meta charset="UTF-8">
+	<title>Contact</title>
+	<!-- Otros elementos del encabezado que desees incluir -->
+
+	<!-- Incluyendo el fragmento meta-header.html -->
+	<th:block th:insert="base/metaheader"></th:block>
+
+	<th:block th:insert="base/bootstrap_link"></th:block>
+
+</head>
+
+<body
+	class="home page page-id-35323 page-template-default image-blur widefull_header2 widefull_topbar2 menunopadding mobileleftbtnmenu mobile-autotable btn-flat content-fullwidth huyi-wcbm-theme-the7 qfe-js-composer js-comp-ver-4.0.1 vc_responsive"
+	data-pid="35323" data-pkey="47a12067b22db0e88832da4e1893092b">
+
+	<div class="fluid-container">
+		<div id="page" class=' topbarPaddingandmarginOff header_bg_mobilehide breackword wide '>
+
+			<th:block th:insert="base/topbar"></th:block>
+			<th:block th:insert="base/header"></th:block>
+			
+			<th:block th:insert="contact/contact_banner"></th:block>
+			<th:block th:insert="contact/info"></th:block>
+			<th:block th:insert="contact/message"></th:block>
+						
+			<th:block th:insert="base/footer1"></th:block>
+			<th:block th:insert="base/footer2"></th:block>
+
+		</div>
+	</div>
+
+	<th:block th:insert="base/bootstrap_scripts"></th:block>
+
+</body>
+
+</html>
