@@ -26,6 +26,8 @@
 
 	<th:block th:insert="base/bootstrap_link"></th:block>
 
+	<th:block th:insert="base/jquery"></th:block>
+
 </head>
 
 <body
@@ -55,6 +57,67 @@
 	</div>
 
 	<th:block th:insert="base/bootstrap_scripts"></th:block>
+
+	<script th:inline="javascript">
+		$(document).ready(function () {
+			// Objeto para almacenar las subcategorías en caché
+			var subcategoryCache = {};
+
+			$('.plus-image').click(function () {
+				console.log("plus-image clicked");
+				var categoryId = $(this).closest('li').find('input[type="checkbox"]').val();
+				console.log("categoryId=" + categoryId);
+				var catId = '#subcategoryList_' + categoryId;
+				console.log("catId=" + catId);
+				var subcategoryList = $(catId);
+				console.log("subcategoryList=" + subcategoryList);
+
+				if (subcategoryList.is(':visible')) {
+					console.log("subcategoryList is visible so hide");
+					subcategoryList.css('display', 'none');
+				} else {
+					console.log("subcategoryList is not visible so show it");
+
+					// Verificar si las subcategorías están en caché
+					if (subcategoryCache[categoryId]) {
+						console.log("Subcategories found in cache");
+						// Utilizar las subcategorías en caché
+						updateSubcategories(subcategoryList, subcategoryCache[categoryId]);
+					} else {
+						console.log("Subcategories not in cache, fetching from server");
+						// Descargar subcategorías y almacenarlas en caché
+						fetch('/api/products/categories/get_all_by_categoria?codigoCategoria=' + categoryId)
+							.then(response => response.json())
+							.then(data => {
+								// Almacenar subcategorías en caché
+								subcategoryCache[categoryId] = data;
+								// Actualizar el contenido de la lista subcategoryList con los datos obtenidos
+								updateSubcategories(subcategoryList, data);
+							})
+							.catch(error => {
+								console.error("Error al obtener las subcategorías", error);
+							});
+					}
+				}
+			});
+
+			// Función para actualizar el contenido de la lista de subcategorías
+			function updateSubcategories(subcategoryList, subcategories) {
+				// Limpiar la lista existente
+				subcategoryList.empty();
+
+				// Agregar las nuevas subcategorías a la lista
+				subcategories.forEach(function (subcategory) {
+					subcategoryList.append('<li class="zoo-filter-item normal"><label class="zoo_ln_cat_filter_category_name"><input type="checkbox" class="" value="benell-accessories" name="categories[79][]">' + subcategory.nombre + '</label><span class="count">1</span></li>');
+				});
+
+				// Mostrar la lista actualizada
+				subcategoryList.css('display', '');
+			}
+		});
+	</script>
+
+
 
 </body>
 
